@@ -1,0 +1,39 @@
+{
+  "extends": ["tslint:recommended"],
+  "rules": {
+    "import-name": false,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ],
+    "max-line-length": [false, 150],
+    "semicolon": [true, "never"],
+    "type-literal-delimiter": false,
+    "trailing-comma": [true, { "multiline": "never", "singleline": "never" }],
+    "quotemark": [true, "double", "avoid-escape", "avoid-template"],
+    "interface-over-type-literal": false,
+    "no-submodule-imports": false,
+    "interface-name": [true, "never-prefix"],
+    "no-implicit-dependencies": false,
+    "object-literal-sort-keys": false,
+    "no-else-after-return": false,
+    "object-shorthand-properties-first": false,
+    "no-console": false,
+    "function-name": false,
+    "no-angle-bracket-type-assertion": true,
+    "align": [true, "statements"],
+    "ter-arrow-parens": false,
+    "max-classes-per-file": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "**/*.json",
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  }
+}
