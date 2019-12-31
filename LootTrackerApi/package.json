@@ -16,7 +16,10 @@
     "url": "https://github.com/TheMats5/PvmLootTracker/issues"
   },
   "homepage": "https://github.com/TheMats5/PvmLootTracker#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@types/morgan": "^1.7.37",
+    "morgan": "^1.9.1"
+  },
   "devDependencies": {
     "eslint": "^6.6.0"
   }
