@@ -1,0 +1,23 @@
+{
+  "name": "pvmloottracker",
+  "version": "1.0.0",
+  "description": "tracks loot for osrs pvm specially made for teams",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheMats5/PvmLootTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheMats5/PvmLootTracker/issues"
+  },
+  "homepage": "https://github.com/TheMats5/PvmLootTracker#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
+}
