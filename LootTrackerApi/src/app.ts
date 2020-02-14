@@ -1,16 +1,26 @@
 import express from "express"
-import logger from "morgan"
 import config from "./config"
-import HomeRouter from "./routes/home.routes"
+import {sequelize} from "./database"
+import {errorHandler} from "./middlewares"
+import HomeRouter from "./routes/homeRoutes"
+import UserRoutes from "./routes/userRoutes"
 
 const app = express()
+let sequelizeForce = false
+app.use(errorHandler)
+app.use(express.json())
 
-app.use("/api", HomeRouter)
+app.use("/api", HomeRouter, UserRoutes)
 
 if (process.env.NODE_ENV === "development") {
     console.log("DEV MODE")
-    app.use(logger("dev"))
+    sequelizeForce = true
 }
-app.listen(config.PORT, () =>
-    console.log(`Cv-service listening on port ${config.PORT}!`)
-)
+
+sequelize.sync({
+    force: sequelizeForce
+}).then(() => {
+    app.listen(config.PORT, () =>
+        console.log(`Cheops-service listening on port ${config.PORT}!`)
+    )
+})
